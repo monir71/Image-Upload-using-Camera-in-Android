@@ -1,5 +1,5 @@
 See the layout:
-
+```
     <ImageView
         android:layout_width="400sp"
         android:layout_height="400sp"
@@ -13,7 +13,7 @@ See the layout:
         android:id="@+id/imgBtn"
         android:layout_marginTop="10sp"
         android:text="Take Photo"/>
-
+```
 Now in MainActivity.java we set OnClickListener to the imgBtn.
 Passing an Intent iCamera to startActivityForResult.
 We have set CAMERA_REQ_CODE as 100. It is necessary because different
@@ -22,7 +22,7 @@ we can determine the exact action from requestCode.
 We created a Bitmap image from data.getExtras().get("data") by typecasting.
 Now setImageBitmap to the ImageView imgCamera.
  
-
+```
 public class MainActivity extends AppCompatActivity {
     private final int CAMERA_REQ_CODE = 100;
     ImageView imgCamera;
@@ -67,3 +67,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+```
